@@ -22,7 +22,11 @@ Notes:
 
 from collections import OrderedDict
 import numpy as np
+
 import tensorflow as tf
+if tf.__version__ >= '2.0':
+    tf = tf.compat.v1
+    tf.disable_eager_execution()
 from tensorboard import summary as summary_lib
 from tensorboard.plugins.custom_scalar import layout_pb2
 

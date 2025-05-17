@@ -8,6 +8,9 @@
 import os
 import numpy as np
 import tensorflow as tf
+if tf.__version__ >= '2.0':
+    tf = tf.compat.v1
+    tf.disable_eager_execution()
 from .. import custom_ops
 from ...util import EasyDict
 

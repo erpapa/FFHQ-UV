@@ -40,8 +40,8 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 - PyTorch 1.7.1: `pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2`
 - TensorBoard: `pip install tensorboard`
 - TensorFlow 1.15.0: `pip install tensorflow-gpu==1.15.0`
-- MS Face API: `pip install --upgrade azure-cognitiveservices-vision-face`
-- Other packages: `pip install tqdm scikit-image opencv-python pillow imageio matplotlib mxnet Ninja google-auth google-auth-oauthlib click requests pyspng imageio-ffmpeg==0.4.3 scikit-learn torchdiffeq==0.0.1 flask kornia==0.2.0 lmdb psutil dominate rtree`
+- MS Face API: `pip install azure-cognitiveservices-vision-face==0.6.0`
+- Other packages: `pip install tqdm scikit-image opencv-python pillow==9.5.0 imageio matplotlib mxnet Ninja google-auth google-auth-oauthlib click requests pyspng imageio-ffmpeg==0.4.3 scikit-learn torchdiffeq==0.0.1 flask kornia==0.2.0 lmdb psutil dominate rtree`
 - **Important: OpenCV's version needs to be higher than 4.5, otherwise it will not work well.**
 - PyTorch3D and Nvdiffrast:
 ```

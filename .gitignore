@@ -2,6 +2,7 @@
 .vscode
 .idea
 *cache*
+/dataset_project/*
 /checkpoints/*
 /topo_assets/*
 !/checkpoints/download and put here

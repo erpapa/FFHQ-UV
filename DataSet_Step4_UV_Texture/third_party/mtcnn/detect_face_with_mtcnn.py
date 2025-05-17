@@ -10,6 +10,9 @@ python test_image_lm86_with_mtcnn.py --checkpoint_dir=checkpoints/test/model.ckp
 import cv2
 import numpy as np
 import tensorflow as tf
+if tf.__version__ >= '2.0':
+    tf = tf.compat.v1
+    tf.disable_eager_execution()
 
 
 def create_mtcnn_pb(sess):

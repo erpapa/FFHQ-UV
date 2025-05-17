@@ -12,7 +12,11 @@ import uuid
 import hashlib
 import tempfile
 import shutil
+
 import tensorflow as tf
+if tf.__version__ >= '2.0':
+    tf = tf.compat.v1
+    tf.disable_eager_execution()
 from tensorflow.python.client import device_lib  # pylint: disable=no-name-in-module
 
 #----------------------------------------------------------------------------
@@ -50,9 +54,11 @@ def _get_compute_cap(device):
 
 def _get_cuda_gpu_arch_string():
     gpus = [x for x in device_lib.list_local_devices() if x.device_type == 'GPU']
-    if len(gpus) == 0:
-        raise RuntimeError('No GPU devices found')
-    (major, minor) = _get_compute_cap(gpus[0])
+    # if len(gpus) == 0:
+    #     raise RuntimeError('No GPU devices found')
+    # (major, minor) = _get_compute_cap(gpus[0])
+    major = 7
+    minor = 0
     return 'sm_%s%s' % (major, minor)
 
 

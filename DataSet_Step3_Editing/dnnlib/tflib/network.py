@@ -12,6 +12,9 @@ import uuid
 import sys
 import numpy as np
 import tensorflow as tf
+if tf.__version__ >= '2.0':
+    tf = tf.compat.v1
+    tf.disable_eager_execution()
 
 from collections import OrderedDict
 from typing import Any, List, Tuple, Union

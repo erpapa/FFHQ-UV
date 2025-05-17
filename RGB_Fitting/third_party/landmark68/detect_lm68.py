@@ -1,8 +1,12 @@
 import cv2
 import numpy as np
 from scipy.io import loadmat
-import tensorflow as tf
 from shutil import move
+
+import tensorflow as tf
+if tf.__version__ >= '2.0':
+    tf = tf.compat.v1
+    tf.disable_eager_execution()
 
 BBRegressorParam = loadmat('third_party/landmark68/BBRegressorParam_r.mat')
 mean_face = np.loadtxt('third_party/landmark68/test_mean_face.txt')
