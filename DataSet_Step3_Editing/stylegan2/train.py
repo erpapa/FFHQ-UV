@@ -6,7 +6,7 @@ import sys
 import json
 import numpy as np
 import torch
-import torch.utils.tensorboard
+#import torch.utils.tensorboard
 from torch import nn
 import torchvision
 try:
@@ -356,8 +356,8 @@ class Trainer:
         self.G_reg_device_batch_size = G_reg_device_batch_size
 
         self.tb_writer = None
-        if tensorboard_log_dir and not self.rank:
-            self.tb_writer = torch.utils.tensorboard.SummaryWriter(tensorboard_log_dir)
+        #if tensorboard_log_dir and not self.rank:
+        #    self.tb_writer = torch.utils.tensorboard.SummaryWriter(tensorboard_log_dir)
 
         self.label_size = label_size
         self.style_mix_prob = style_mix_prob
